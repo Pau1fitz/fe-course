@@ -10,10 +10,16 @@ class App extends Component {
 		super(props);
 		
 		this.state = {
-			currentView: 'html'
+			currentView: 'html',
+      htmlContent: '//code',
+      cssContent: '//code',
+      jsContent: '//code'
 		}
 
 		this.updateView = this.updateView.bind(this);
+    this.updateHTML = this.updateHTML.bind(this);
+    this.updateCSS = this.updateCSS.bind(this);
+    this.updateJS = this.updateJS.bind(this); 
 	}
 
 
@@ -24,9 +30,27 @@ class App extends Component {
 		});
 	}
 
+  updateHTML(content) {
+    this.setState({
+      htmlContent: content
+    });
+  }
+
+  updateCSS(content) {
+    this.setState({
+      cssContent: content
+    });
+  }
+
+  updateJS(content) {
+    this.setState({
+      jsContent: content
+    });
+  }
+
   render() {
 
-  	const { currentView } = this.state;
+  	const { currentView, htmlContent, cssContent, jsContent } = this.state;
 
     return (
     	<div>
@@ -34,19 +58,19 @@ class App extends Component {
     		<Tabs updateView={this.updateView} />
 
     		<div style={{display: currentView === 'js' ? 'block' : 'none' }}>
-    			<CodeBox mode="javascript" /> 
+    			<CodeBox htmlContent={ htmlContent } updateJS={ this.updateJS } code={ jsContent } mode="javascript" /> 
     		</div>
 
     		<div style={{display: currentView === 'css' ? 'block' : 'none' }}>
-				<CodeBox mode="css" /> 
+				  <CodeBox code={ cssContent } updateCSS={ this.updateCSS } mode="css" /> 
     		</div>
 
     		<div style={{display: currentView === 'html' ? 'block' : 'none' }}>
-				<CodeBox mode="text/html" /> 
+				  <CodeBox code={ htmlContent } updateHTML={ this.updateHTML } mode="text/html" /> 
     		</div>
 
     		<div style={{display: currentView === 'result' ? 'block' : 'none' }}>
-				<Result /> 
+				  <Result /> 
     		</div>
   	  		
   	  	</div>

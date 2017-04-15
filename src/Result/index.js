@@ -5,9 +5,7 @@ class Result extends Component {
 
   render() {
     return (
-    	<div>
-  	 		<p>Hey there</p>
-  	 	</div>
+    	<iframe id="preview"></iframe>
     )
   }
 }
