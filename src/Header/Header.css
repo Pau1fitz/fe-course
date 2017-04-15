@@ -1,0 +1,24 @@
+.header {
+	align-items: center;
+    background: #fff;
+    border-bottom: 4px solid #1a1a1a;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+
+.logo, .logo img {
+    display: block;
+    height: 22px;
+    width: 161px;
+}
+
+.title {
+    color: #1a1a1a;
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 24px;
+}
