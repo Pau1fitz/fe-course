@@ -1,0 +1,35 @@
+.sidebar {
+	width: 100%;
+	display: inline-block;
+}
+
+ul {
+	list-style: none;
+	background-color: #ffc994;
+	margin: 0;
+	padding: 0;
+}
+
+.number {
+	align-items: center;
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 700;
+    height: 24px;
+    justify-content: center;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: top;
+    width: 24px;
+    margin: 2px;
+}
+
+.item-desc {
+	display: inline-block;
+    padding-top: 4px;
+}

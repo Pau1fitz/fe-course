@@ -28,7 +28,7 @@ class CodeBox extends Component {
 
   loadCSS() {
     let $head = $("#preview").contents().find("head");  
-    $head.html("<style>" + this.props.code + "</style>");
+    $head.html("<style>" + this.props.cssContent + "</style>");
   }
 
   loadJS() {
@@ -39,6 +39,8 @@ class CodeBox extends Component {
       preview.open();
       preview.write(this.props.htmlContent + scriptTag)
       preview.close();
+
+      this.loadCSS();
   }
 
   updateCode(newCode) {
