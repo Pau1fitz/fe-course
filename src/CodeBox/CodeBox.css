@@ -8,8 +8,18 @@
 
 #editor {
 	height: 100%;
+    position: relative;
 }
 
 .ReactCodeMirror, .CodeMirror {
 	height: 100%;
+}
+.run-js {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
 }

@@ -90,7 +90,7 @@ class CodeBox extends Component {
 
         return (
             <div className="code-box">
-                <p onClick={ this.runJS }>RUN JAVASCRIPT</p>
+                <p className="run-js" onClick={ this.runJS }>RUN JAVASCRIPT</p>
                 <CodeMirror ref="editor" value={this.props.code} onChange={ this.updateCode } options={options} />
             </div>
         );
