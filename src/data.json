@@ -1,5 +1,5 @@
 {
-	
+
 	"introduction": {
 
 		"sideBarItems": [
@@ -32,6 +32,13 @@
 				"html": "<html>\n\t<p>Referencing an Array or Object item</p>\n</html>",
 				"css": "//code",
 				"js": "var cities = ['Toronto', 'Paris', 'London'];\n\nvar body = {\n\t'eyes': 'brown',\n\t'height': 175, \n\t'hair': ['dark', 'short']\n}\n\nalert('The first city is ' + cities[0]);\n\nalert(name + ' is ' + body.height + 'cm tall');"
+			},
+			{
+				"content": "Function",
+				"html": "<html>\n\t<p>Referencing an Array or Object item</p>\n</html>",
+				"css": "//code",
+				"js": "function add(x, y){\n\tconsole.log(x + y);\n}\n\nadd(10, 5);"
+
 			}
 		],
 
@@ -42,13 +49,12 @@
       		},
 	    	{
 	        	"header": "Types",
-	        	"content": "<div class='step-explanation'><p>There are different types of variables in JavaScript. Each of them has different capabilities.</p></div>"
+	        	"content": "<div class='step-explanation'><p>There are different types of variables in JavaScript. Each of them has different capabilities.</p><ul><li><span class='bold'>strings:</span> which is text that can contain letters, numbers, spaces…</li><li><span class='bold'>numbers:</span> which can be negative, decimal, fractional… and on which you can perform operations</li><li><span class='bold'>booleans:</span> which can only be either <span class='code'>true</span> or <span class='code'>false</span></li><li><span class='bold'>arrays:</span> which are ordered lists of other variables</li><li><span class='bold'>objects:</span> which are unordered lists of key/value combinations</li></ul></div>"
 	      	},
-
 	    	{
 	        	"header": "Conditional",
 	        	"content": "<div class='step-explanation'><p>Conditional statements are used to perform different actions based on different conditions.</p><p>In JavaScript we can use <span class='code'>if/else</span> statements</p></div>"
-	      	}, 
+	      	},
       		{
         		"header": "Loops",
         		"content": "<div class='step-explanation'><p>Loops can execute a block of code a number of times.</p><p> Loops are handy, if you want to run the same code over and over again, each time with a different value, which is often the case when working with arrays.</p></div>"
@@ -56,6 +62,10 @@
 			{
         		"header": "Referencing an Array or Object item",
         		"content": "<div class='step-explanation'><p>If you want to access a specific element of an array, you can use the syntax <span class='code'>cities[0]</span>, where 0 (zero) is the index of the element you want to access.</p><p>For an object, you can simply use the key: <span class='code'>body.eyes</span> or <span class='code'>body['eyes']</span>.</p></div>"
+      		},
+      		{
+      			"header": "Functions",
+      			"content": "<div class='step-explanation'><p>A JavaScript function is a block of code designed to perform a particular task.</p><p>A JavaScript function is executed when something invokes it (calls it).</p></div>"
       		}
     	]
 
