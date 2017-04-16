@@ -15,11 +15,12 @@ class App extends Component {
 		super(props);
 		this.state = {
 			currentView: 'js',
-      		htmlContent: customData.introduction.sideBarItems[currentSlideIndex].html,
-      		cssContent: customData.introduction.sideBarItems[currentSlideIndex].css,
+			htmlContent: customData.introduction.sideBarItems[currentSlideIndex].html,
+			cssContent: customData.introduction.sideBarItems[currentSlideIndex].css,
 			jsContent: customData.introduction.sideBarItems[currentSlideIndex].js,
-			currentSlideIndex: 0,
+			currentSlideIndex: 0
 		}
+
     	this.updateCurrentSlideIndex = this.updateCurrentSlideIndex.bind(this);
 		this.updateView = this.updateView.bind(this);
 	    this.updateHTML = this.updateHTML.bind(this);
