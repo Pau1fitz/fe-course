@@ -64,13 +64,7 @@ class App extends Component {
 
     const sideBarItems = [
       {
-        content: 'Create an HTML Page'
-      },
-      {
-        content: 'Create a JS file'
-      },
-      {
-        content: 'Variables'
+        content: 'Variables',
       },
       {
         content: 'Types'
@@ -89,21 +83,21 @@ class App extends Component {
 
     const information = [
       {
-        header: 'Create an HTML Page',
-        content: '<div class="step-explanation"><p>In order to use JavaScript in our browser, we need to include it in an HTML page.<p></div>'
-      },
-      {
-        header: 'Create a JavaScript file',
-        content: '<div class="step-explanation"><p>Let’s see if we included our file correctly.</p><p>In the same folder, let’s create a file called <span class="code">scripts.js</span> in which we call a simple function.</p></div>'
-      },
-      {
         header: 'Variables',
-        content: '<div class="step-explanation"><p>A variable is a named element that can contain a value.<p><p>Instead of typing "hello world" directly, let’s assign that value to a variable called message.</p></div>'
+        content: '<div class="step-explanation"><p>A variable is a named element that can contain a value.<p></div>'
       },
       {
         header: 'Types',
         content: '<div class="step-explanation"><p>There are different types of variables in JavaScript. Each of them has different capabilities.</p></div>'
       },
+      {
+        header: 'Referencing an Array or Object item',
+        content: '<div class="step-explanation"><p>If you want to access a specific element of an array, you can use the syntax cities[0], where 0 (zero) is the index of the element you want to access.</p><p>For an object, you can simply use the key: body.eyes or body["eyes"].</p></div>'
+      },
+      {
+        header: 'Conditional',
+        content: '<div class="step-explanation"><p>Conditional statements are used to perform different actions based on different conditions.</p><p>In JavaScript we have the following conditional statements:</p><ul><li>Use if to specify a block of code to be executed, if a specified condition is true</li><li>Use else to specify a block of code to be executed, if the same condition is false</li><li>Use else if to specify a new condition to test, if the first condition is false</li><li>Use switch to specify many alternative blocks of code to be executed</li></ul></div>'
+      }
     ];
 
     return (

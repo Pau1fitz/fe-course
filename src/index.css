@@ -45,3 +45,9 @@ body, button, input, select, textarea {
   height: 100%;
 }
 
+.is-fixed {
+  position: fixed !important;
+  width: 15% !important;
+  top: 0;
+}
+

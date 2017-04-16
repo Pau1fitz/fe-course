@@ -8,11 +8,15 @@ class SideBar extends Component {
 
   		const list = this.props.sideBarItems.map((item, index) => {
   			return(
-  				<li key={ index }><span className="number">{index + 1}</span> <span className="item-desc">{item.content}</span></li>
+  				<li key={ index }>
+            <a href={'#' + index }>
+              <span className="number">{index + 1}</span> <span className="item-desc">{item.content}</span>
+            </a>
+          </li>
   			)
   		});
     	return (
-    		<div className="sidebar">
+    		<div id="sidebar">
 
           <div className="sidebar-container">
 
