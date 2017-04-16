@@ -46,13 +46,11 @@ class CodeBox extends Component {
   }
 
   loadHTML() {
-
-    console.log(this.props)
-      let previewFrame = document.getElementById('preview'); 
-      var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
-      preview.open();
-      preview.write(this.props.code);
-      preview.close();
+    let previewFrame = document.getElementById('preview'); 
+    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+    preview.open();
+    preview.write(this.props.code);
+    preview.close();
   }
 
   runJS() {
