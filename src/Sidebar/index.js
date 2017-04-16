@@ -11,8 +11,8 @@ class SideBar extends Component {
                 this.props.updateCurrentSlideIndex(index)
             }
             return(
-                <li onClick={ updateIndex } key={ index } className={index === this.props.currentSlideIndex ? 'active-slide' : ''}>
-                    <a>
+                <li onClick={ updateIndex } key={ index }>
+                    <a href={item.id}>
                         <span className="number">{index + 1}</span> <span className="item-desc">{item.content}</span>
                     </a>
                 </li>

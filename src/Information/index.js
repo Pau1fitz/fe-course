@@ -7,7 +7,7 @@ class Information extends Component {
 
         const list = this.props.information.map((item, index) => {
   	         return(
-	             <li key={index}>
+	             <li id={item.id} key={index}>
 	                 <p className="header">
 		                  <span className="number">{ index + 1 }</span>
 					      <span className="info-title">{ item.header }</span>
