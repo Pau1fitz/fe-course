@@ -24,6 +24,9 @@ class CodeBox extends Component {
 
   componentDidMount() {
     this.refs.editor.getCodeMirror().refresh(); 
+    this.loadCSS();
+    this.loadHTML();
+    this.loadJS();
   }
 
   loadCSS() {
@@ -32,7 +35,7 @@ class CodeBox extends Component {
   }
 
   loadJS() {
-      let scriptTag = "<script>"+ this.props.code + "<";
+      let scriptTag = "<script>"+ this.props.jsContent + "<";
       scriptTag +=  "/script>";
       let previewFrame = document.getElementById('preview');
       let preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
@@ -43,15 +46,19 @@ class CodeBox extends Component {
       this.loadCSS();
   }
 
-  updateCode(newCode) {
-    //update html
-    if(this.props.mode === 'text/html') {
-      this.props.updateHTML(newCode);
+  loadHTML() {
       let previewFrame = document.getElementById('preview'); 
       var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
       preview.open();
       preview.write(this.props.code);
       preview.close();
+  }
+
+  updateCode(newCode) {
+    //update html
+    if(this.props.mode === 'text/html') {
+      this.props.updateHTML(newCode);
+      this.loadHTML();
     }
 
     //update css
