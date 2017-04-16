@@ -3,58 +3,46 @@ html, body {
   padding: 0;
   height: 100%;
 }
-
 body, button, input, select, textarea {
 	font-family: 'Roboto', sans-serif;
 }
-
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 [class*='col-'] {
   float: left;
 }
-
 .col-1-40 {
   width: 40%;
 }
-
 .col-1-45 {
   width: 45%;
 }
-
 .col-1-15 {
   width: 15%;
   height: 100%;
 }
-
 .grid {
   height: 100%;
 }
-
 .grid:after {
   content: "";
   display: table;
   clear: both;
 }
-
 #root, .main {
   height: 100%;
 }
-
 .sidebar-is-fixed {
   position: fixed !important;
   width: 15% !important;
   top: 0;
 }
-
 .editor-is-fixed {
   position: fixed !important;
   width: 45% !important;
   top: 0;
   right: 0;
 }
-

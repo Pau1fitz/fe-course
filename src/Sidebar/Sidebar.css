@@ -6,29 +6,24 @@
     width: 100%;
     height: 100%;
 }
-
 .sidebar-container {
     background: rgba(80, 155, 238, 1);
     height: 100%;
 }
-
 #sidebar ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-
 #sidebar a {
     display: flex;
     padding: 10px;
     text-decoration: none;
     color: #1a1a1a;
 }
-
 #sidebar li:hover {
     background-color: #fff;
 }
-
 #sidebar .number {
     align-items: center;
     background: #fff;
@@ -47,12 +42,10 @@
     width: 24px;
     margin-right: 4px;
 }
-
 .item-desc {
 	display: inline-block;
     padding-top: 4px;
 }
-
 .active-slide {
     background-color: #fff;
 }
