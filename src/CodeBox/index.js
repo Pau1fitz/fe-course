@@ -19,14 +19,13 @@ class CodeBox extends Component {
     this.updateCode = this.updateCode.bind(this);
     this.loadCSS = this.loadCSS.bind(this);
     this.loadJS = this.loadJS.bind(this);
-
+    this.runJS = this.runJS.bind(this);
   }
 
   componentDidMount() {
     this.refs.editor.getCodeMirror().refresh(); 
     this.loadCSS();
     this.loadHTML();
-    this.loadJS();
   }
 
   loadCSS() {
@@ -47,11 +46,17 @@ class CodeBox extends Component {
   }
 
   loadHTML() {
+
+    console.log(this.props)
       let previewFrame = document.getElementById('preview'); 
       var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
       preview.open();
       preview.write(this.props.code);
       preview.close();
+  }
+
+  runJS() {
+    this.loadJS();
   }
 
   updateCode(newCode) {
@@ -65,13 +70,18 @@ class CodeBox extends Component {
     if(this.props.mode === 'css') {
       this.props.updateCSS(newCode);
       this.loadCSS();
-
     }
 
+    //update js
     if(this.props.mode === 'javascript') {
       this.props.updateJS(newCode);
-      this.loadJS();
     }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.props = nextProps;
+    this.loadCSS();
+    this.loadHTML();
   }
 
   render() {
@@ -84,6 +94,7 @@ class CodeBox extends Component {
 
     return (
       <div className="code-box">
+        <p onClick={ this.runJS }>RUN JAVASCRIPT</p>
         <CodeMirror ref="editor" value={this.props.code} onChange={ this.updateCode } options={options} />
       </div>
     );
