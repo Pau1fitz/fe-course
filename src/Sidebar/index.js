@@ -13,10 +13,16 @@ class SideBar extends Component {
   		});
     	return (
     		<div className="sidebar">
+
+          <div className="sidebar-container">
+
+            <ul>
+              { list }
+            </ul>
+
+          </div>
   	  		
-    			<ul>
-    				{ list }
-    			</ul>
+
 
   	  		</div>
     	)

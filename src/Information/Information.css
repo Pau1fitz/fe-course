@@ -1,0 +1,42 @@
+.information ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.information .number {
+	align-items: center;
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 700;
+    height: 24px;
+    justify-content: center;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: top;
+    width: 24px;
+    margin: 2px;
+}
+
+.information .header {
+	background-color: #f2f2f2;
+    border-bottom: 4px solid #1a1a1a;
+    height: 60px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.information .info-title {
+    position: relative;
+    top: 5px;
+}
+
+
+.information .step-explanation {
+    padding: 20px;
+}

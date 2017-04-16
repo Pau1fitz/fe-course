@@ -1,24 +1,23 @@
-.header {
-	align-items: center;
+.Header {
     background: #fff;
     border-bottom: 4px solid #1a1a1a;
-    display: flex;
     height: 60px;
-    justify-content: space-between;
     padding: 10px 20px;
-
+    margin: 0;
 }
 
 .logo, .logo img {
-    display: block;
+    display: inline-block;
     height: 22px;
     width: 161px;
 }
 
 .title {
     color: #1a1a1a;
-    flex-grow: 1;
     font-size: 18px;
     font-weight: 700;
     margin-left: 24px;
+    display: inline-block;
+    position: relative;
+    top: -4px;
 }

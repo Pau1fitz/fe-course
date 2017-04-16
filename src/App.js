@@ -4,6 +4,7 @@ import Header from './Header';
 import Tabs from './Tabs';
 import Result from './Result';
 import Sidebar from './Sidebar';
+import Information from './Information';
 
 
 class App extends Component {
@@ -83,12 +84,30 @@ class App extends Component {
       {
         content: 'Loops'
       }
+    ];
 
 
+    const information = [
+      {
+        header: 'Create an HTML Page',
+        content: '<div class="step-explanation"><p>In order to use JavaScript in our browser, we need to include it in an HTML page.<p></div>'
+      },
+      {
+        header: 'Create a JavaScript file',
+        content: '<div class="step-explanation"><p>Let’s see if we included our file correctly.</p><p>In the same folder, let’s create a file called <span class="code">scripts.js</span> in which we call a simple function.</p></div>'
+      },
+      {
+        header: 'Variables',
+        content: '<div class="step-explanation"><p>A variable is a named element that can contain a value.<p><p>Instead of typing "hello world" directly, let’s assign that value to a variable called message.</p></div>'
+      },
+      {
+        header: 'Types',
+        content: '<div class="step-explanation"><p>There are different types of variables in JavaScript. Each of them has different capabilities.</p></div>'
+      },
     ];
 
     return (
-    	<div>
+    	<div className="main">
 	    	
         <Header />
 
@@ -97,14 +116,22 @@ class App extends Component {
 
         <div className="grid">
 
-          <div className="col-1-2">
+          <div className="col-1-15">
 
             <Sidebar sideBarItems={ sideBarItems} />
           
           </div>
 
+          <div className="col-1-40">
 
-          <div className="editor col-1-2">
+            <Information information={ information } />
+
+          </div>
+
+ 
+
+
+          <div className="editor col-1-45">
 
             <div style={{display: currentView === 'js' ? 'block' : 'none' }}>
               <CodeBox code={ jsContent }  htmlContent={ htmlContent } cssContent={ cssContent } updateJS={ this.updateJS } mode="javascript" /> 
@@ -125,10 +152,9 @@ class App extends Component {
           </div>
 
         </div>
-          
+        
 
-  
-
+        
 
   	  </div>
     );
