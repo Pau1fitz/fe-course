@@ -45,9 +45,16 @@ body, button, input, select, textarea {
   height: 100%;
 }
 
-.is-fixed {
+.sidebar-is-fixed {
   position: fixed !important;
   width: 15% !important;
   top: 0;
+}
+
+.editor-is-fixed {
+  position: fixed !important;
+  width: 45% !important;
+  top: 0;
+  right: 0;
 }
 

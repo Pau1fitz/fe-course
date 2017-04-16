@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   var $menu = document.getElementById('sidebar');
+  var $editor = document.getElementById('editor');
+
+  console.log($editor)
+
   // var $menuItems = document.querySelectorAll('.menu a');
 
   // Array.from($menuItems).forEach(function($el) {
@@ -15,13 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function fixMenu(currentScroll) {
     if (currentScroll > 80) {
-      if (!$menu.classList.contains('is-fixed')) {
-        $menu.classList.add('is-fixed');
-      }
+     	if (!$menu.classList.contains('sidebar-is-fixed')) {
+        	$menu.classList.add('sidebar-is-fixed');
+      	}
+
+    	if (!$editor.classList.contains('editor-is-fixed')) {
+        	$editor.classList.add('editor-is-fixed');
+      	}
     } else {
-      if ($menu.classList.contains('is-fixed')) {
-        $menu.classList.remove('is-fixed');
-      }
+    	if ($menu.classList.contains('sidebar-is-fixed')) {
+        	$menu.classList.remove('sidebar-is-fixed');
+      	}
+    	if ($editor.classList.contains('editor-is-fixed')) {
+        	$editor.classList.remove('editor-is-fixed');
+      	}
     }
   }
 

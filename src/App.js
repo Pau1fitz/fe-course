@@ -105,9 +105,6 @@ class App extends Component {
 	    	
         <Header />
 
-
-    		<Tabs currentView={ currentView } updateView={this.updateView} />
-
         <div className="grid">
 
           <div className="col-1-15">
@@ -125,21 +122,23 @@ class App extends Component {
  
 
 
-          <div className="editor col-1-45">
+          <div id="editor" className="col-1-45">
 
-            <div style={{display: currentView === 'js' ? 'block' : 'none' }}>
+            <Tabs currentView={ currentView } updateView={this.updateView} />
+
+            <div style={{display: currentView === 'js' ? 'block' : 'none', height: '100%' }}>
               <CodeBox code={ jsContent }  htmlContent={ htmlContent } cssContent={ cssContent } updateJS={ this.updateJS } mode="javascript" /> 
             </div>
 
-            <div style={{display: currentView === 'css' ? 'block' : 'none' }}>
+            <div style={{display: currentView === 'css' ? 'block' : 'none', height: '100%' }}>
               <CodeBox htmlContent={ htmlContent }  cssContent={ cssContent } code={ cssContent } jsContent={ jsContent } updateCSS={ this.updateCSS } mode="css" /> 
             </div>
 
-            <div style={{display: currentView === 'html' ? 'block' : 'none' }}>
+            <div style={{display: currentView === 'html' ? 'block' : 'none', height: '100%' }}>
               <CodeBox code={ htmlContent } htmlContent={ htmlContent }  cssContent={ cssContent } jsContent={ jsContent } updateHTML={ this.updateHTML } mode="text/html" /> 
             </div>
 
-            <div style={{display: currentView === 'result' ? 'block' : 'none' }}>
+            <div style={{display: currentView === 'result' ? 'block' : 'none', height: '100%' }}>
               <Result /> 
             </div>
           
