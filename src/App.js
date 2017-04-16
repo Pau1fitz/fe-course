@@ -7,23 +7,77 @@ import Sidebar from './Sidebar';
 import Information from './Information';
 
 
+const sideBarItems = [
+  {
+    content: 'Variables',
+    html: '<html>\n\t<p>variables</p>\n</html>',
+    css: '//code',
+    js: 'var message = "Hello World";'
+  },
+  {
+    content: 'Types',
+    html: '<html>Types</html>',
+    css: '//code',
+    js: 'var name = "Paul Fitzgerald"; // String\nvar age = 24; // Number\nvar student = true; // Boolean\nvar cities = ["Toronto", "Paris", "London"] // Array\n// Object \nvar body = {\n\t"eyes": "brown",\n\t"height": 175, \n\t"hair": ["dark", "short"]\n}'
+  },
+  {
+    content: 'Conditional',
+    html: '<html>Conditional</html>',
+    css: '//code',
+    js: 'var name = "Paul Fitzgerald"; // String\nvar age = 24; // Number\nvar student = true; // Boolean\nvar cities = ["Toronto", "Paris", "London"] // Array\n// Object \nvar body = {\n\t"eyes": "brown",\n\t"height": 175, \n\t"hair": ["dark", "short"]\n}\n\nif (student) {\n\talert(name + " is a student");\n}\n\nif (age < 18) {\n\talert(name + " is a minor");\n} else {\n\talert(name + " is an adult");\n}'
+  },
+  {
+    content: 'Loops',
+    html: '<html>Loops</html>',
+    css: '//code',
+    js: 'var name = "Peter"\nvar cities = ["Toronto", "Paris", "London"];\n\nalert(name + " has been to:");\n\ncities.forEach(function(city) {\n\talert(city);\n});\n'
+  },
+  {
+    content: 'Referencing an Array or Object item',
+    html: '<html>Array</html>',
+    css: '//code',
+    js: 'var cities = ["Toronto", "Paris", "London"];\n\nvar body = {\n\t"eyes": "brown",\n\t"height": 175, \n\t"hair": ["dark", "short"]\n}\n\nalert("The first city is " + cities[0]);\n\nalert(name + " is " + body.height + "cm tall");'
+  },
+];
+
+let currentSlideIndex = 0;
+
 class App extends Component {
 
 	constructor(props) {
 		super(props);
+
+
 		
 		this.state = {
-			currentView: 'html',
-      htmlContent: '//code',
-      cssContent: '//code',
-      jsContent: '//code'
+			currentView: 'js',
+      htmlContent: sideBarItems[currentSlideIndex].html,
+      cssContent: sideBarItems[currentSlideIndex].css,
+      jsContent: sideBarItems[currentSlideIndex].js,
+      currentSlideIndex: 0,
 		}
 
+
+
+    this.updateCurrentSlideIndex = this.updateCurrentSlideIndex.bind(this);
 		this.updateView = this.updateView.bind(this);
     this.updateHTML = this.updateHTML.bind(this);
     this.updateCSS = this.updateCSS.bind(this);
     this.updateJS = this.updateJS.bind(this); 
 	}
+
+  updateCurrentSlideIndex(index) {
+
+    currentSlideIndex = index;
+    
+    this.setState({
+      currentSlideIndex: index,
+      htmlContent: sideBarItems[currentSlideIndex].html,
+      cssContent: sideBarItems[currentSlideIndex].css,
+      jsContent: sideBarItems[currentSlideIndex].js
+    });
+
+  }
 
 
 	updateView(value) {
@@ -35,6 +89,8 @@ class App extends Component {
 	}
 
   updateHTML(content) {
+
+    console.log(content)
 
     this.setState({
       htmlContent: content
@@ -60,26 +116,7 @@ class App extends Component {
 
   render() {
 
-  	const { currentView, htmlContent, cssContent, jsContent } = this.state;
-
-    const sideBarItems = [
-      {
-        content: 'Variables',
-      },
-      {
-        content: 'Types'
-      },
-      {
-        content: 'Referencing an Array or Object item'
-      },
-      {
-        content: 'Conditional'
-      },
-      {
-        content: 'Loops'
-      }
-    ];
-
+  	const { currentView, htmlContent, cssContent, jsContent, currentSlideIndex } = this.state;
 
     const information = [
       {
@@ -90,14 +127,20 @@ class App extends Component {
         header: 'Types',
         content: '<div class="step-explanation"><p>There are different types of variables in JavaScript. Each of them has different capabilities.</p></div>'
       },
+
+      {
+        header: 'Conditional',
+        content: '<div class="step-explanation"><p>Conditional statements are used to perform different actions based on different conditions.</p><p>In JavaScript we can use if/else statements</p></div>'
+      }, 
+      {
+        header: 'Loops',
+        content: '<div class="step-explanation"><p>Loops can execute a block of code a number of times.</p><p> Loops are handy, if you want to run the same code over and over again, each time with a different value, which is often the case when working with arrays.</p></div>'
+      },
+
       {
         header: 'Referencing an Array or Object item',
         content: '<div class="step-explanation"><p>If you want to access a specific element of an array, you can use the syntax cities[0], where 0 (zero) is the index of the element you want to access.</p><p>For an object, you can simply use the key: body.eyes or body["eyes"].</p></div>'
       },
-      {
-        header: 'Conditional',
-        content: '<div class="step-explanation"><p>Conditional statements are used to perform different actions based on different conditions.</p><p>In JavaScript we have the following conditional statements:</p><ul><li>Use if to specify a block of code to be executed, if a specified condition is true</li><li>Use else to specify a block of code to be executed, if the same condition is false</li><li>Use else if to specify a new condition to test, if the first condition is false</li><li>Use switch to specify many alternative blocks of code to be executed</li></ul></div>'
-      }
     ];
 
     return (
@@ -109,7 +152,7 @@ class App extends Component {
 
           <div className="col-1-15">
 
-            <Sidebar sideBarItems={ sideBarItems} />
+            <Sidebar updateCurrentSlideIndex={ this.updateCurrentSlideIndex } currentSlideIndex={ currentSlideIndex } sideBarItems={ sideBarItems} />
           
           </div>
 

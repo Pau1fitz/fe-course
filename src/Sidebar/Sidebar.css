@@ -52,3 +52,7 @@
 	display: inline-block;
     padding-top: 4px;
 }
+
+.active-slide {
+    background-color: #fff;
+}

@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var $menu = document.getElementById('sidebar');
   var $editor = document.getElementById('editor');
 
-  console.log($editor)
-
   // var $menuItems = document.querySelectorAll('.menu a');
 
   // Array.from($menuItems).forEach(function($el) {
