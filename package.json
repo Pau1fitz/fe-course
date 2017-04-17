@@ -7,10 +7,12 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
+    "js-beautify": "^1.6.12",
     "react": "^15.5.4",
     "react-codemirror": "^0.3.0",
     "react-dom": "^15.5.4",
-    "react-prop-types": "^0.4.0"
+    "react-prop-types": "^0.4.0",
+    "react-router": "2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

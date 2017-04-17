@@ -6,44 +6,44 @@
 			{
 				"content": "Variables",
 				"id":"#variables",
-				"html": "<html>\n\t<p>Variables</p>\n</html>",
+				"html": "<html><p>Variables</p></html>",
 				"css": "//code",
 				"js": "var message = 'Hello World';"
 			},
 			{
 				"content": "Types",
 				"id":"#types",
-				"html": "<html>\n\t<p>Types</p>\n</html>",
+				"html": "<html><p>Types</p></html>",
 				"css": "//code",
-				"js": "var name = 'Paul Fitzgerald'; // String\nvar age = 24; // Number\nvar student = true; // Boolean\nvar cities = ['Toronto', 'Paris', 'London'] // Array\n// Object \nvar body = {\n\t'eyes': 'brown',\n\t'height': 175, \n\t'hair': ['dark', 'short']\n}"
+				"js": "var name = 'Paul Fitzgerald';var age = 24;var student = true;var cities = ['Toronto', 'Paris', 'London'];var body = {'eyes': 'brown','height': 175, 'hair': ['dark', 'short']}"
 			},
 			{
 				"content": "Conditional",
 				"id":"#conditional",
-				"html": "<html>\n\t<p>Conditional Statements</p>\n</html>",
+				"html": "<html><p>Conditional Statements</p></html>",
 				"css": "//code",
-				"js": "var name = 'Paul Fitzgerald'; // String\nvar age = 24; // Number\nvar student = true; // Boolean\nvar cities = ['Toronto', 'Paris', 'London'] // Array\n// Object \nvar body = {\n\t'eyes': 'brown',\n\t'height': 175, \n\t'hair': ['dark', 'short']\n}\n\nif (student) {\n\talert(name + 'is a student ');\n}\n\nif (age < 18) {\n\talert(name + 'is a minor ');\n} else {\n\talert(name + 'is an adult ');\n}"
+				"js": "var name = 'Paul Fitzgerald';var age = 24;var student = true;var cities = ['Toronto', 'Paris', 'London'];var body = {'eyes': 'brown','height': 175,'hair': ['dark', 'short']};if (student) {alert(name + 'is a student ');}if (age < 18) {alert(name + 'is a minor ');} else {alert(name + 'is an adult ');}"
 			},
 			{
 				"content": "Loops",
 				"id":"#loops",
-				"html": "<html>\n\t<p>Loops</p>\n</html>",
+				"html": "<html><p>Loops</p></html>",
 				"css": "//code",
-				"js": "var name = 'Peter'\nvar cities = ['Toronto', 'Paris', 'London'];\n\nalert(name + ' has been to:');\n\ncities.forEach(function(city) {\n\talert(city);\n});\n"
+				"js": "var name = 'Peter';var cities = ['Toronto', 'Paris', 'London'];alert(name + ' has been to:');cities.forEach(function(city) {alert(city);});"
 			},
 			{
 				"content": "Referencing an Array or Object item",
 				"id": "#reference",
-				"html": "<html>\n\t<p>Referencing an Array or Object item</p>\n</html>",
+				"html": "<html><p>Referencing an Array or Object item</p></html>",
 				"css": "//code",
-				"js": "var cities = ['Toronto', 'Paris', 'London'];\n\nvar body = {\n\t'eyes': 'brown',\n\t'height': 175, \n\t'hair': ['dark', 'short']\n}\n\nalert('The first city is ' + cities[0]);\n\nalert(name + ' is ' + body.height + 'cm tall');"
+				"js": "var cities = ['Toronto', 'Paris', 'London'];var body = {'eyes': 'brown','height': 175, 'hair': ['dark', 'short']}alert('The first city is ' + cities[0]);alert(name + ' is ' + body.height + 'cm tall');"
 			},
 			{
 				"content": "Function",
 				"id": "#functions",
-				"html": "<html>\n\t<p>Referencing an Array or Object item</p>\n</html>",
+				"html": "<html><p>Referencing an Array or Object item</p></html>",
 				"css": "//code",
-				"js": "function add(x, y){\n\tconsole.log(x + y);\n}\n\nadd(10, 5);"
+				"js": "function add(x, y){console.log(x + y);}add(10, 5);"
 
 			}
 		],
@@ -80,6 +80,26 @@
       			"content": "<div class='step-explanation'><p>A JavaScript function is a block of code designed to perform a particular task.</p><p>A JavaScript function is executed when something invokes it (calls it).</p></div>"
       		}
     	]
+
+	},
+
+	"lessonOne": {
+		"sideBarItems": [
+			{
+				"content": "jQuery introduction",
+				"id":"#jquery-intro",
+				"html": "<html><head><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></head></html>",
+				"css": "//code",
+				"js": "$('body').css('background-color', 'red');"
+			}
+		],
+		"information": [
+			{
+				"header": "jQuery introduction",
+				"id":"jquery-intro",
+				"content": "<div class='step-explanation'><p>jQuery makes it much easier to use JavaScript on your website.<p></div>"
+			}
+		]
 
 	}
 
