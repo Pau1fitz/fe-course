@@ -15,14 +15,12 @@ class Lesson extends Component {
 
 	constructor(props) {
 
-		console.log('here')
-
 		super(props);
 		this.state = {
 			currentView: 'js',
-			htmlContent: jsBeautify.html(props.route.sideBarItems[currentSlideIndex].html),
-			cssContent: jsBeautify.css(props.route.sideBarItems[currentSlideIndex].css),
-			jsContent: jsBeautify(props.route.sideBarItems[currentSlideIndex].js),
+			htmlContent: props.route.sideBarItems[currentSlideIndex].html,
+			cssContent: props.route.sideBarItems[currentSlideIndex].css,
+			jsContent: props.route.sideBarItems[currentSlideIndex].js,
 			currentSlideIndex: 0
 		}
 
@@ -39,9 +37,9 @@ class Lesson extends Component {
 
 	    this.setState({
 	     	currentSlideIndex: index,
-	      	htmlContent: jsBeautify.html(this.props.route.sideBarItems[currentSlideIndex].html),
-	      	cssContent: jsBeautify.css(this.props.route.sideBarItems[currentSlideIndex].css),
-	      	jsContent: jsBeautify(this.props.route.sideBarItems[currentSlideIndex].js)
+	      	htmlContent: this.props.route.sideBarItems[currentSlideIndex].html,
+	      	cssContent: this.props.route.sideBarItems[currentSlideIndex].css,
+	      	jsContent: this.props.route.sideBarItems[currentSlideIndex].js
 	    });
 	}
 

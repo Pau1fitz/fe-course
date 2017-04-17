@@ -88,19 +88,54 @@
 			{
 				"content": "jQuery introduction",
 				"id":"#jquery-intro",
-				"html": "<html><head><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></head></html>",
+				"html": "<html></html>",
 				"css": "//code",
 				"js": "$('body').css('background-color', 'red');"
+			},
+			{
+				"content": "jQuery HTML",
+				"id":"#jquery-html",
+				"html": "<html></html>",
+				"css": "//code",
+				"js": "$('p').click(function(){$('p').css('font-size', '24px');});"
+			},
+			{
+				"content": "jQuery Effects",
+				"id":"#jquery-effects",
+				"html": "<html></html>",
+				"css": "//code",
+				"js": "$('p').click(function(){$('p').hide();});"
+			},
+			{
+				"content": "Slideshow",
+				"id":"#jquery-effects",
+				"html": "<html></html>",
+				"css": "//code",
+				"js": "//slideshow code"
 			}
 		],
 		"information": [
 			{
 				"header": "jQuery introduction",
 				"id":"jquery-intro",
-				"content": "<div class='step-explanation'><p>jQuery makes it much easier to use JavaScript on your website.<p></div>"
+				"content": "<div class='step-explanation'><p>jQuery makes it much easier to use JavaScript on your website.</p><p>The easiest way to use on your website is to include from a CDN.</p></div>"
+			},
+			{
+				"header": "jQuery HTML",
+				"id":"jquery-html",
+				"content": "<div class='step-explanation'><p>One very important part of jQuery is the possibility to manipulate the DOM.</p><p>jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.</p></div>"
+			},
+			{
+				"header": "jQuery Effects",
+				"id":"jquery-effects",
+				"content": "<div class='step-explanation'><p>Jquery allows us to Hide, Show, Toggle, Slide, Fade, and Animate.</p></div>"
+			},
+			{
+				"header": "Create Slideshow",
+				"id":"slideshow",
+				"content": "<div class='step-explanation'><p>Using the topics we have already covered we can create a slideshow.</p></div>"
 			}
 		]
-
 	}
 
 }
