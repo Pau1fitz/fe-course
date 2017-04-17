@@ -109,9 +109,9 @@
 			{
 				"content": "Slideshow",
 				"id":"#jquery-effects",
-				"html": "<html></html>",
+				"html": "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script><div class='slideshow'><img class='slideshow-img' /></div>",
 				"css": "//code",
-				"js": "//slideshow code"
+				"js": "var images=['https://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg','https://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg'],index=0;setInterval(function(){index++,index===images.length?(index=0,$('.slideshow-img').attr('src',images[index])):$('.slideshow-img').attr('src',images[index])},2e3);"
 			}
 		],
 		"information": [
