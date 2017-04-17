@@ -5,11 +5,9 @@ import Tabs from './Tabs';
 import Result from './Result';
 import Sidebar from './Sidebar';
 import Information from './Information';
-import customData from './data.json';
 
 //current solution
 import jsBeautify from 'js-beautify';
-
 
 let currentSlideIndex = 0;
 

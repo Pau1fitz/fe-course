@@ -50,6 +50,7 @@ class CodeBox extends Component {
         preview.open();
         preview.write(this.props.code);
         preview.close();
+        this.loadCSS();
     }
 
     runJS() {
