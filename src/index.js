@@ -14,6 +14,7 @@ ReactDOM.render(
         <Route path="/" component={App}/>
         <Route path="intro" component={Lesson} sideBarItems={customData.introduction.sideBarItems} information={customData.introduction.information} />
         <Route path="lesson-one" component={Lesson} sideBarItems={customData.lessonOne.sideBarItems} information={customData.lessonOne.information} />
+        <Route path="lesson-two" component={Lesson} sideBarItems={customData.lessonTwo.sideBarItems} information={customData.lessonTwo.information} />
     </Router>,
 
   document.getElementById('root')

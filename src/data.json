@@ -136,6 +136,65 @@
 				"content": "<div class='step-explanation'><p>Using the topics we have already covered we can create a slideshow.</p></div>"
 			}
 		]
+	},
+
+	"lessonTwo": {
+		"sideBarItems": [
+			{
+				"content": "AJAX introduction",
+				"id":"#ajax-intro",
+				"html": "<html></html>",
+				"css": "//code",
+				"js": "//code"
+			},
+			{
+				"content": "AJAX GET request",
+				"id":"#ajax-get",
+				"html": "<html></html>",
+				"css": "//code",
+				"js": "//code"
+			},
+			{
+				"content": "AJAX POST request",
+				"id":"#ajax-post",
+				"html": "<html></html>",
+				"css": "//code",
+				"js": "//code"
+			},
+			{
+				"content": "JSON intro",
+				"id":"#json-intro",
+				"html": "<html></html>",
+				"css": "//code",
+				"js": "//code"
+			}
+		],
+		"information": [
+			{
+				"header": "AJAX introduction",
+				"id":"ajax-intro",
+				"content": "<div class='step-explanation'><p>AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.</p></div>"
+			},
+			{
+				"header": "AJAX GET request",
+				"id":"ajax-intro",
+				"content": "<div class='step-explanation'><p>GET is basically used for just getting (retrieving) some data from the server.</p></div>"
+			},
+			{
+				"header": "AJAX POST request",
+				"id":"ajax-post",
+				"content": "<div class='step-explanation'><p>POST can also be used to get some data from the server.</p></div>"
+			},
+			{
+				"header": "JSON intro",
+				"id":"json-intro",
+				"content": "<div class='step-explanation'><p>When exchanging data between a browser and a server, the data can only be text.</p><p>JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.</p><p>We can also convert any JSON received from the server into JavaScript objects.</p></div>"
+			}
+		]
+
+
+
 	}
+
 
 }
