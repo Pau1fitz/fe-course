@@ -39,7 +39,7 @@
 				"js": "var cities = ['Toronto', 'Paris', 'London'];var body = {'eyes': 'brown','height': 175, 'hair': ['dark', 'short']}alert('The first city is ' + cities[0]);alert(name + ' is ' + body.height + 'cm tall');"
 			},
 			{
-				"content": "Function",
+				"content": "Functions",
 				"id": "#functions",
 				"html": "<html><p>Referencing an Array or Object item</p></html>",
 				"css": "//code",
@@ -88,30 +88,44 @@
 			{
 				"content": "jQuery introduction",
 				"id":"#jquery-intro",
-				"html": "<html></html>",
+				"html": "<html><head><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script></head><body><p>Section</p></body></html>",
 				"css": "//code",
 				"js": "$('body').css('background-color', 'red');"
 			},
 			{
+				"content": "jQuery Selectors",
+				"id":"#jquery-selectors",
+				"html": "<html><head><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script></head><body><p>Section</p></body></html>",
+				"css": "//code",
+				"js": "$('p');"
+			},
+			{
 				"content": "jQuery HTML",
 				"id":"#jquery-html",
-				"html": "<html></html>",
+				"html": "<html><head><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script></head><body><p>Section</p></body></html>",
 				"css": "//code",
 				"js": "$('p').click(function(){$('p').css('font-size', '24px');});"
 			},
 			{
+				"content": "jQuery Events",
+				"id":"#jquery-events",
+				"html": "<html><head><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script></head><body><p>Section</p></body></html>",
+				"css": "//code",
+				"js": "$('p').click(function(){$('p').css('display', 'none');});"
+			},
+			{
 				"content": "jQuery Effects",
 				"id":"#jquery-effects",
-				"html": "<html></html>",
+				"html": "<html><head><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script></head><body><p>Section</p></body></html>",
 				"css": "//code",
 				"js": "$('p').click(function(){$('p').hide();});"
 			},
 			{
 				"content": "Slideshow",
-				"id":"#jquery-effects",
+				"id":"#slideshow",
 				"html": "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script><div class='slideshow'><img class='slideshow-img' /></div>",
 				"css": "//code",
-				"js": "var images=['https://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg','https://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg'],index=0;setInterval(function(){index++,index===images.length?(index=0,$('.slideshow-img').attr('src',images[index])):$('.slideshow-img').attr('src',images[index])},2e3);"
+				"js": "var images = ['https://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg', 'https://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg'],index = 0;setInterval(function() {if(index === images.length){index = 0;$('.slideshow-img').attr('src', images[index]);} else {$('.slideshow-img').attr('src', images[index])}});"
 			}
 		],
 		"information": [
@@ -121,9 +135,19 @@
 				"content": "<div class='step-explanation'><p>jQuery makes it much easier to use JavaScript on your website.</p><p>The easiest way to use on your website is to include from a CDN.</p></div>"
 			},
 			{
+				"header": "jQuery Selectors",
+				"id":"jquery-selectors",
+				"content": "<div class='step-explanation'><p>jQuery selectors are used to 'find' (or select) HTML elements based on their id, classes, types and much more.</p></div>"
+			},
+			{
 				"header": "jQuery HTML",
 				"id":"jquery-html",
 				"content": "<div class='step-explanation'><p>One very important part of jQuery is the possibility to manipulate the DOM.</p><p>jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.</p></div>"
+			},
+			{
+				"header": "jQuery Events",
+				"id":"jquery-events",
+				"content": "<div class='step-explanation'><p>Events are actions that can be detected by your Web Application.</p><p>You can attach events to things like a mouse click, hovering over an element or a keystroke on your keyboard.</p></div>"
 			},
 			{
 				"header": "jQuery Effects",

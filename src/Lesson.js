@@ -18,9 +18,9 @@ class Lesson extends Component {
 		super(props);
 		this.state = {
 			currentView: 'js',
-			htmlContent: props.route.sideBarItems[currentSlideIndex].html,
+			htmlContent: jsBeautify.html(props.route.sideBarItems[currentSlideIndex].html, {'indent_size': 4, 'indent_inner_html': true}),
 			cssContent: props.route.sideBarItems[currentSlideIndex].css,
-			jsContent: props.route.sideBarItems[currentSlideIndex].js,
+			jsContent: jsBeautify(this.props.route.sideBarItems[currentSlideIndex].js),
 			currentSlideIndex: 0
 		}
 
@@ -37,9 +37,9 @@ class Lesson extends Component {
 
 	    this.setState({
 	     	currentSlideIndex: index,
-	      	htmlContent: this.props.route.sideBarItems[currentSlideIndex].html,
+	      	htmlContent: jsBeautify.html(this.props.route.sideBarItems[currentSlideIndex].html, {'indent_size': 4, 'indent_inner_html': true}),
 	      	cssContent: this.props.route.sideBarItems[currentSlideIndex].css,
-	      	jsContent: this.props.route.sideBarItems[currentSlideIndex].js
+	      	jsContent: jsBeautify(this.props.route.sideBarItems[currentSlideIndex].js)
 	    });
 	}
 

@@ -14,7 +14,7 @@ class Header extends Component {
   			<h1 className="title">Frontend JS Course Syllabus</h1>
 
             <div className="lessons">
-                <Link to='/' activeClassName="active">
+                <Link to='/intro' activeClassName="active">
                     <p>Intro</p>
                 </Link>
 
